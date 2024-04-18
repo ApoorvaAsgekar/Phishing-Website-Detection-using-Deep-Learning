@@ -1,1 +1,12 @@
 # Phishing-Website-Detection-using-Deep-Learning
+
+The aim was to detect malicious URLs using minimum features by applying deep machine learning techniques. Machine learning algorithms like Logistic Regression, K-Nearest Neighbours (KNN), Support Vector Machines (SVMs), Decision Trees, Random Forest, Ada-Boost, Gradient Boosting, and XG-Boost were initially applied. Subsequently, the same classification was performed using deep learning algorithms such as Artificial Neural Networks (ANN) or Convolutional Neural Network (CNN) algorithms with Long Short-Term Memory algorithm. The accuracy of each algorithm was assessed, and it was determined whether the chosen dataset yielded better efficiency with ML or DL algorithms. The algorithm with better accuracy was then used to create a web application using Django, which was deployed on Flask. The website takes a URL as input and determines whether the website is dangerous or safe to use.
+
+Implementation:
+The initial step was to determine the dataset using which the classifier could be trained. The Phishing Websites Data Set from the UCI Machine Learning Repository was tentatively chosen, consisting of 11,055 datapoints with 6,157 legitimate URLs and 4,898 phishing URLs. Each datapoint had 30 features subdivided into three categories: URL and derived features, Page’s source code based features, and Domain-based features. Data cleansing and data visualization were conducted to understand the relation between various datasets and to eliminate redundancies.
+
+The next step was feature selection, involving the selection of independent variables for model training. Information gain was calculated for each attribute to remove unnecessary attributes that did not contribute to the model. The data was then split into training and testing datasets, and the model was trained using each of the ML algorithms mentioned above. The testing data was used to check the accuracy of each model.
+
+While research papers related to models using ML algorithms are readily available, Phishing detection using Deep Learning has not been explored as much. Hence, the accuracy of the chosen DL algorithms on the dataset was checked and compared to the ML algorithms or even a hybrid ML algorithm.
+
+Once the model was developed, work began on creating the web application. The website, built using Django and JavaScript, was designed to detect whether a site is malicious or not based on the model's predictions. Later, it was deployed using Flask.
